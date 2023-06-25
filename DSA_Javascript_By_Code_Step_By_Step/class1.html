@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array DSA</title>
+    <script>
+        let data = [41, 23, 34, 15, 66, 74, 8, 39,]
+        function GetElement() {
+            let el = document.getElementById('element').value;
+            if (el < data.length && typeof parseInt(el) === "number" && el >= 0) alert(data[el])
+            else alert("please enter valid input")
+
+        }
+        // for (let i = 0; i <= a.length - 1; i++) {
+        //     document.write(`Array ${i} is ${a[i]} <br>`)
+        // }
+        // let element = 7;
+        // document.write(a[element])
+    </script>
+</head>
+
+<body>
+    <h1>Array Traversing</h1>
+    <input type="text" id="element">
+    <button onclick="GetElement()">Submit</button>
+
+</body>
+
+</html>
