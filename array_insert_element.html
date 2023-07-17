@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert Element In Array</title>
+    <script>
+        // let data = [12, 17, 76, 74, 56, 51];
+        // let newElement = 70;
+        // let position = 0;
+        // console.warn(data);
+        // for (i = data.length - 1; i >= 0; i--) {
+        //     if (i >= position) {
+        //         data[i + 1] = data[i];
+        //         if (i === position) {
+        //             data[i] = newElement;
+        //         }
+        //     }
+        // }
+        // document.write(`${data}\n`)
+        // document.write(`${data.length}`)
+        // console.warn(data);
+        const InsertEl = () => {
+            let data = [56, 45, 78, 98, 56, 32];
+            let newElement = parseInt(document.getElementById('newElement').value);
+            let position = parseInt(document.getElementById('position').value);
+            for (let i = data.length - 1; i >= 0; i--) {
+                if (i >= position) {
+                    data[i + 2] = data[i];
+                    if (i === position) {
+                        data[i] = newElement;
+                    }
+                }
+            }
+            document.getElementById('h1data').innerHTML = data;
+            // console.log(data);
+        }
+    </script>
+</head>
+
+<body>
+
+    <input type="text" name="" id="newElement" placeholder="enter new element ">
+    <input type="text" name="" id="position" placeholder="enter position">
+    <button onclick="InsertEl()">Insert</button>
+    <h1 id="h1data"></h1>
+</body>
+
+</html>
